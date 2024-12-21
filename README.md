@@ -54,3 +54,10 @@ Once you have a valid `Probe` struct, you can initialize a device.
   ...
 }
 ```
+
+## HTTP Client Configuration
+
+`onvif` uses [tesla](https://github.com/elixir-tesla/tesla) with [Finch](https://github.com/sneako/finch) as an adapter. You can provide your own adapter by adding a config to your `config.exs` file
+```elixir
+config :onvif, http_adapter: Tesla.Adapter.Mint, http_adapter_config: []
+```
