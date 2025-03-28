@@ -13,8 +13,8 @@ defmodule Onvif.PTZ do
     "xmlns:tptz": "http://www.onvif.org/ver20/ptz/wsdl"
   ]
 
-  @spec request(Device.t(), module()) :: {:ok, any} | {:error, map()}
-  @spec request(Device.t(), list(), atom()) :: {:ok, any} | {:error, map()}
+  @spec request(Device.t(), module()) :: :ok | {:ok, any} | {:error, map()}
+  @spec request(Device.t(), list(), atom()) :: :ok | {:ok, any} | {:error, map()}
   def request(%Device{} = device, args \\ [], operation) do
     content = generate_content(operation, args)
     do_request(device, operation, content)
