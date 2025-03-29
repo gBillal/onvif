@@ -1,6 +1,6 @@
 defmodule Onvif.PTZ.Schemas.PTZSpeed do
   @moduledoc """
-    PTZ speed schema
+  PTZ speed/vector schema
   """
 
   use Ecto.Schema
